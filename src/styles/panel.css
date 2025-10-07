@@ -1,0 +1,85 @@
+:root {
+  --color-primario: #b8860b;
+  --color-secundario: #8b0000;
+  --color-acento: #1e90ff;
+  --color-fondo: #fffaf0;
+  --color-texto: #2f2f2f;
+  --color-boton: #b8860b;
+  --color-boton-hover: #daa520;
+}
+
+#panelFuncionesPorRol {
+  margin: 2em auto;
+  max-width: 600px;
+  padding: 1.5em;
+  background-color: var(--color-fondo) !important;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bloque-rol {
+  margin-bottom: 2em;
+  padding: 1em;
+  border-left: 4px solid var(--color-primario);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.bloque-rol h4 {
+  margin-bottom: 0.5em;
+  color: var(--color-secundario);
+  font-size: 18px;
+}
+
+.bloque-rol label {
+  display: block;
+  margin: 0.4em 0;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.bloque-rol input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* 🔹 Responsive para celulares */
+@media screen and (max-width: 480px) {
+  #panelFuncionesPorRol {
+    padding: 1em;
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .bloque-rol {
+    padding: 0.8em;
+  }
+
+  .bloque-rol h4 {
+    font-size: 16px;
+  }
+
+  .bloque-rol label {
+    font-size: 14px;
+  }
+}
+.bloque-rol button {
+  display: block;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 15px;
+  background-color: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.bloque-rol button:hover {
+  background-color: var(--color-boton-hover);
+}

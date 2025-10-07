@@ -1,0 +1,267 @@
+:root {
+  --color-primario: #b8860b;
+  --color-secundario: #8b0000;
+  --color-acento: #1e90ff;
+  --color-fondo: #fffaf0;
+  --color-texto: #2f2f2f;
+  --color-boton: #b8860b;
+  --color-boton-hover: #daa520;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 1em;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.encabezado img {
+  height: 80px;
+}
+
+.encabezado h1 {
+  color: var(--color-primario);
+  font-family: 'Georgia', serif;
+  margin: 0.2em 0;
+}
+
+.encabezado h2 {
+  color: var(--color-secundario);
+  font-family: 'Brush Script MT', cursive;
+  font-style: italic;
+  margin: 0.2em 0;
+}
+
+main {
+  width: 100%;
+}
+
+main h3 {
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 1em;
+}
+
+.formulario-dashboard {
+  background-color: white;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: auto;
+  border-left: 6px solid var(--color-secundario);
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+  font-weight: bold;
+  color: var(--color-primario);
+}
+
+input, select, button {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-acento);
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+button {
+  margin-top: 1.5em;
+  background-color: var(--color-boton);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* ✅ Bloque de sesión institucional */
+#infoSesion {
+  margin: 0 auto 1.5em auto;
+  background-color: #eef4ff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  text-align: center;
+  max-width: 320px;
+}
+
+#infoSesion p {
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icono {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.icono.usuario::before { content: "👤"; }
+.icono.rol::before { content: "🎚️"; }
+.icono.fecha::before { content: "📅"; }
+.icono.hora::before { content: "⏰"; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+th, td {
+  padding: 0.8em;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 🔹 Responsive para celulares */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .formulario-dashboard {
+    padding: 1em;
+    max-width: 100%;
+    box-shadow: none;
+    border-left: none;
+  }
+
+  input, select, button {
+    font-size: 16px;
+    padding: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .encabezado img {
+    height: 60px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  #infoSesion p {
+    justify-content: center;
+  }
+
+  #infoSesion span.icono + strong {
+    font-weight: normal;
+  }
+}
+
+/* 🔹 Responsive para tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .formulario-dashboard {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input, select, button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+/* ✅ Panel de funciones */
+#panelFuncionesPorRol {
+  margin: 2em auto;
+  max-width: 600px;
+  padding: 1.5em;
+  background-color: var(--color-fondo);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.bloque-rol {
+  margin-bottom: 2em;
+  padding: 1em;
+  border-left: 4px solid var(--color-primario);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.bloque-rol h4 {
+  margin-bottom: 0.5em;
+  color: var(--color-secundario);
+  font-size: 18px;
+}
+
+.bloque-rol label {
+  display: block;
+  margin: 0.4em 0;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.bloque-rol input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* ✅ Estructura visual para centrado */
+.envoltorio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.main-centralizado {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.panel-central {
+  width: 100%;
+  max-width: 700px;
+  padding: 1em;
+  box-sizing: border-box;
+}

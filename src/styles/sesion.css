@@ -1,0 +1,56 @@
+:root {
+  --color-texto: #2f2f2f;
+}
+
+#infoSesion {
+  position: static;
+  margin: 0 auto 1.5em auto;
+  background-color: #eef4ff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  color: var(--color-texto);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  text-align: center;
+  max-width: 320px;
+}
+
+#infoSesion p {
+  margin: 0.5em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icono {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+.icono.usuario::before { content: "👤"; }
+.icono.rol::before { content: "🎚️"; }
+.icono.fecha::before { content: "📅"; }
+.icono.hora::before { content: "⏰"; }
+
+/* 🔹 Responsive para celulares */
+@media screen and (max-width: 480px) {
+  #infoSesion {
+    max-width: 100%;
+    padding: 8px;
+  }
+
+  #infoSesion p {
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  #infoSesion span.icono + strong {
+    font-weight: normal;
+  }
+}
